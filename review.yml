@@ -1,0 +1,89 @@
+aid: honor
+name: Honor
+review:
+  question: Does Honor expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Honor publishes no public or partner API
+    of any kind - REST, WebSocket, SSE, or otherwise - so there is no server-push
+    transport (or any documented transport) to model. The Honor Care Platform is
+    a closed, first-party care-delivery operations system. Its mobile apps (Honor
+    Care Pro, Honor Family) and client web portal talk to an internal, undocumented
+    backend; those internal calls are not published, not stable, and out of scope
+    for an AsyncAPI document.
+findings:
+  summary: |
+    Honor (Honor Technology, Inc.) does not publish a documented public WebSocket
+    API - and in fact publishes no public or partner developer API at all. Honor
+    is a home care company that operates the proprietary Honor Care Platform for
+    caregiver scheduling/matching, client care plans, visit management, and
+    back-office operations across the Honor Care Network and, since its August 2021
+    acquisition, the Home Instead franchise network. The platform is exposed only
+    through first-party clients - the Honor Care Pro and Honor Family mobile apps
+    and a login-only client web portal (portal.honorcare.com). No developer portal,
+    API reference, OpenAPI/AsyncAPI definition, authentication scheme, or partner
+    integration program is publicly documented. No realtime, bidirectional, or
+    streaming WebSocket (ws:// or wss://) endpoint is documented anywhere.
+  openSource: |
+    Honor publishes no open-source SDKs, no public GitHub organization of platform
+    code, and no self-hostable component. The Honor Care Platform is closed and
+    proprietary.
+  publicApi: false
+  partnerApi: |
+    No publicly documented partner or B2B API program was found. Home Instead
+    franchise offices consume the Honor Care Platform as internal operators, not
+    via a documented external API.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: The mobile apps and client portal call an internal Honor backend over
+        HTTPS, but no endpoints, base URL, or reference documentation are published.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in Honor's public materials
+        as of the review date.
+  endpointsModeled: none
+  disambiguation: |
+    developer.honor.com is the developer portal of HONOR, the Chinese
+    consumer-electronics / smartphone brand (formerly part of Huawei), and is
+    unrelated to Honor Technology the home care company reviewed here.
+sources:
+  - url: https://www.joinhonor.com
+    type: Website
+    note: Primary Honor home care marketing site. No developer/API section.
+  - url: https://www.honorcare.com/about-honor/
+    type: Website
+    note: Describes the Honor Care Platform (local care + centralized operations +
+      technology). No developer API, partner API, or integration surface mentioned.
+  - url: https://www.honorcare.com/home-care/honor-care-network/
+    type: Website
+    note: Honor Care Network overview. No API documentation.
+  - url: https://portal.honorcare.com/login
+    type: Portal
+    note: Client web portal - login only, no public developer surface.
+  - url: https://play.google.com/store/apps/details?id=com.joinhonor.careprovider
+    type: MobileApp
+    note: Honor Care Pro app for caregivers. First-party client of the internal
+      backend; no public API documented.
+  - url: https://play.google.com/store/apps/details?id=com.joinhonor.family
+    type: MobileApp
+    note: Honor Family app. First-party client of the internal backend; no public
+      API documented.
+  - url: https://www.homeinstead.com/news-and-media/honor-acquires-home-instead/
+    type: PressRelease
+    note: August 2021 - Honor acquires Home Instead; Home Instead becomes a Honor
+      subsidiary running on the Honor Care Platform.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists, and Honor exposes no documented public or
+    partner API of any kind. The apis.yml entry is maintained as an honest stub
+    (kind: company, no apis, care-service pricing only) rather than fabricating
+    endpoints. No AsyncAPI document was created because there is no documented
+    transport on Honor's platform to model.
