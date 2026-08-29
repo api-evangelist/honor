@@ -17,6 +17,17 @@ description: Honor (Honor Technology, Inc.) is a San Francisco-based home care
   care-delivery operations system rather than an API product. This entry is
   therefore a documentation stub kept for catalog completeness; it will be updated
   if Honor ever ships a documented public or partner API.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
