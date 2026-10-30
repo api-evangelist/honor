@@ -1,4 +1,4 @@
-# Honor (honor)
+# Honor
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,56 +64,80 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Honor (Honor Technology, Inc.) is a San Francisco-based home care company, founded in 2014, that pairs a high-touch, non-medical in-home care network for aging adults with a proprietary technology and operations platform - the **Honor Care Platform**. The platform covers caregiver ("Care Pro") scheduling and matching, client care plans, visit management, and centralized back-office operations, and serves families across 800+ cities and towns in the United States.
+Honor (Honor Technology, Inc.) is a San Francisco-based home care company that pairs a high-touch, non-medical in-home care network for aging adults with a proprietary technology and operations platform - the Honor Care Platform - covering caregiver ("Care Pro") scheduling and matching, client care plans, visit management, and back-office operations. In August 2021 Honor acquired Home Instead, the world's largest senior home care franchise network, which now operates as a subsidiary of Honor; the Honor Care Platform powers both the Honor Care Network and Home Instead franchise offices. Honor exposes its platform to internal staff and to caregivers and families through the Honor Care Pro and Honor Family mobile apps and a client web portal. As of this writing Honor publishes NO public or partner developer API, developer portal, or API reference documentation - the platform is a closed, first-party care-delivery operations system rather than an API product. This entry is therefore a documentation stub kept for catalog completeness; it will be updated if Honor ever ships a documented public or partner API.
 
-In **August 2021, Honor acquired Home Instead**, the world's largest senior home care franchise network. Home Instead now operates as a subsidiary of Honor under the Home Instead name, and the Honor Care Platform powers both the Honor Care Network and Home Instead franchise offices. The combined organization represents one of the largest players in the home care industry.
+**Areas:** Home Care · Senior Care · Aging · Health Tech · Care Platform · Caregivers · Home Instead
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/honor/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/honor/refs/heads/main/apis.yml)
+## Honor on APIs.io
 
-## API Access Status: No Public API
+Everything profiled for Honor is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/honor/](https://apis.io/providers/honor/)** — or go straight to one of the APIs or properties below.
 
-As of this writing (2026-07-03), **Honor does not publish any public or partner developer API, developer portal, or API reference documentation.** The Honor Care Platform is a closed, first-party care-delivery operations system rather than an API product.
+### Published properties
 
-What exists is entirely first-party and app-facing, not an open developer surface:
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Honor Care Pro** mobile app (iOS / Android) - Care Pros manage their schedule, choose shifts and clients, view client profiles and care needs, clock in/out, and record visit notes.
-- **Honor Family** mobile app (iOS / Android) - families set up care visits, schedule times and locations, receive post-visit updates, and view wellness insights.
-- **Client web portal** at `portal.honorcare.com` (login only).
+#### Security (1)
 
-These clients communicate with Honor's internal backend, but no endpoints, authentication scheme, OpenAPI definition, or partner-integration program is publicly documented. There is no `developer.joinhonor.com` / `developer.honorcare.com` developer portal.
+Authentication, trust centre, and vulnerability disclosure.
 
-> Disambiguation: `developer.honor.com` belongs to **HONOR**, the Chinese consumer-electronics / smartphone brand (formerly part of Huawei), and is unrelated to Honor Technology the home care company documented here.
+- [Honor Domain Security](https://apis.io/security/honor/honor-domain-security/)
 
-Logical domains a Honor API *would* cover if one were ever published - Care Visits / Scheduling, Care Pros (caregivers), Clients, Care Plans, and Billing - are noted here only to describe the platform's shape. **No such endpoints are documented or modeled in this entry**, and none are fabricated. This repository is a stub kept for catalog completeness and will be updated if Honor ships a documented public or partner API.
+## Where to find this API
 
-## Pricing
-
-Honor's pricing is **care-service based**, not API based. Costs are quoted per hour of in-home care (and vary by market, care needs, and hours), arranged through Honor or a local Home Instead office - there is no API product, usage tier, or metered API pricing to document.
-
-## Tags
-
-- Home Care
-- Senior Care
-- Aging
-- Health Tech
-- Care Platform
-- Caregivers
-- Home Instead
-- No Public API
-
-## Timestamps
-
-- **Created:** 2026-07-03
-- **Modified:** 2026-07-03
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.joinhonor.com)
-- [Website](https://www.honorcare.com)
-- [LinkedIn](https://www.linkedin.com/company/joinhonor)
-- [Crunchbase](https://www.crunchbase.com/organization/honor)
+- [Blog](https://www.honorcare.com:443/news/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 4.2** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/honor/](https://apis.io/providers/honor/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Honor: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/honor/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
